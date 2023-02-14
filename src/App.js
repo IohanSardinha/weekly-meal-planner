@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Recipes from "./components/Recipes";
+import AddRecipe from "./components/AddRecipe";
+import Calendar from "./components/Calendar";
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Calendar />} />
+          <Route path="/add-recipe" element={<AddRecipe />} />
+          <Route path="/recipes" element={<Recipes />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("root"));
