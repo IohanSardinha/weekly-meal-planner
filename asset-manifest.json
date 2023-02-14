@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/weekly-meal-planner/static/css/main.13f3835d.css",
+    "main.js": "/weekly-meal-planner/static/js/main.a8bba401.js",
+    "static/js/787.30fa1748.chunk.js": "/weekly-meal-planner/static/js/787.30fa1748.chunk.js",
+    "index.html": "/weekly-meal-planner/index.html",
+    "main.13f3835d.css.map": "/weekly-meal-planner/static/css/main.13f3835d.css.map",
+    "main.a8bba401.js.map": "/weekly-meal-planner/static/js/main.a8bba401.js.map",
+    "787.30fa1748.chunk.js.map": "/weekly-meal-planner/static/js/787.30fa1748.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13f3835d.css",
+    "static/js/main.a8bba401.js"
+  ]
+}
