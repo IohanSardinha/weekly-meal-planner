@@ -30,9 +30,20 @@
 
 .calendar__select {
   width: 100%;
+  min-width: 150px; /* Ensures a minimum width for longer names */
   padding: 10px;
+  font-size: 16px; /* Increase font size for better legibility */
   border: 2px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
   word-wrap: break-word;
+}
+
+/* Print-specific styles */
+@media print {
+  .calendar__select {
+    width: auto;      /* Allow the select to expand based on content */
+    min-width: 200px; /* Adjust as needed */
+    font-size: 18px;  /* Increase font size for print clarity */
+  }
 }
