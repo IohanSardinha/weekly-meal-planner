@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './../styles/Calendar.css';
 import Header from './Header';
 
@@ -47,6 +47,22 @@ const Calendar = () => {
     localStorage.setItem('weekPlan', JSON.stringify(updatedWeekPlan));
     updateShoppingList();
   };
+
+
+  useEffect(() => {
+    const handlePrintShortcut = (e) => {
+      if (e.ctrlKey && e.key === 'p') {
+        e.preventDefault();
+        window.open('/print', '_blank');
+      }
+    };
+
+    window.addEventListener('keydown', handlePrintShortcut);
+    
+    return () => {
+      window.removeEventListener('keydown', handlePrintShortcut);
+    };
+  }, []);
 
   return (
     <div>

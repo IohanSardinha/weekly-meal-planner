@@ -30,20 +30,24 @@
 
 .calendar__select {
   width: 100%;
-  min-width: 150px; /* Ensures a minimum width for longer names */
+  min-width: 150px;
   padding: 10px;
-  font-size: 16px; /* Increase font size for better legibility */
+  font-size: 16px;
   border: 2px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
-  word-wrap: break-word;
+}
+
+.calendar__select option {
+  white-space: normal;  /* Attempt to allow text wrapping */
+  line-height: 1.2;
 }
 
 /* Print-specific styles */
 @media print {
   .calendar__select {
-    width: auto;      /* Allow the select to expand based on content */
-    min-width: 200px; /* Adjust as needed */
-    font-size: 18px;  /* Increase font size for print clarity */
+    width: auto;
+    min-width: 200px;
+    font-size: 18px;
   }
 }

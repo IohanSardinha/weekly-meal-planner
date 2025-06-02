@@ -1,0 +1,65 @@
+/* For screen preview */
+.print-container {
+  padding: 20px;
+}
+
+.print-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.print-table th, 
+.print-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.print-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Print-specific styles */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  @page {
+    margin: 1cm;
+  }
+
+  .print-container {
+    padding: 0;
+  }
+
+  /* Force meal plan to be on its own page */
+  .meal-plan-section {
+    page-break-after: always;
+  }
+
+  /* Prevent tables from breaking across pages */
+  .print-table {
+    page-break-inside: avoid;
+  }
+  
+  /* Shopping list should start on new page */
+  .shopping-list-section {
+    page-break-before: always;
+  }
+  
+  /* Optional: Add page margin between sections */
+  .meal-plan-section {
+    margin-bottom: 2cm;
+  }
+}
