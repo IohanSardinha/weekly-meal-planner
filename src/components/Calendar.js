@@ -50,6 +50,8 @@ const Calendar = () => {
 
 
   useEffect(() => {
+    document.title = "Weekly Meal Planner 1.0";
+
     const handlePrintShortcut = (e) => {
       if (e.ctrlKey && e.key === 'p') {
         e.preventDefault();
